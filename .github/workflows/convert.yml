@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: sleep 120
-        timeout-miniutes: ${{ fromJSON(env.TIMEOUT) }}
+        timeout-minutes: ${{ fromJSON(env.TIMEOUT) }}
