@@ -1,0 +1,9 @@
+name: Cntinue on Error
+on: push
+jobs:
+  failure:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1
+        continue-on-error: true
+      - run: echo "Sucess"
