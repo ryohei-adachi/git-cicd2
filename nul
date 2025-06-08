@@ -1,6 +1,6 @@
 HTTP/2 200 
 server: nginx
-date: Sun, 08 Jun 2025 22:00:03 GMT
+date: Sun, 08 Jun 2025 22:20:19 GMT
 content-type: text/html; charset=UTF-8
 vary: Accept-Encoding
 link: <https://www.yorontou.info/wp-json/>; rel="https://api.w.org/", <https://www.yorontou.info/wp-json/wp/v2/pages/8>; rel="alternate"; title="JSON"; type="application/json", <https://www.yorontou.info/>; rel=shortlink
