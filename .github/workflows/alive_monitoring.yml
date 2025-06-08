@@ -4,8 +4,9 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "status_code=$(curl -s -I -o nul -w ¥"%{http_code}¥" ¥"${TARGET_URL}¥")" >> "${GITHUB_OUTPUT}"
+      - run: echo "status_code=$(curl -s -I -o nul -w '%{http_code}' '${TARGET_URL}')" >> "${GITHUB_OUTPUT}"
         id: http_connectivity
+        shell: bash
         env:
           TARGET_URL: "https://www.login-tech.com/lp"
       - env:
