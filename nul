@@ -1,7 +1,10 @@
-HTTP/2 200 
-server: nginx
-date: Sun, 08 Jun 2025 22:20:19 GMT
-content-type: text/html; charset=UTF-8
-vary: Accept-Encoding
-link: <https://www.yorontou.info/wp-json/>; rel="https://api.w.org/", <https://www.yorontou.info/wp-json/wp/v2/pages/8>; rel="alternate"; title="JSON"; type="application/json", <https://www.yorontou.info/>; rel=shortlink
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+X-Powered-By: PHP/8.1.25
+Cache-Control: no-cache, private
+Date: Sun, 08 Jun 2025 22:31:30 GMT
+Set-Cookie: XSRF-TOKEN=eyJpdiI6InhWK3JOTjFXTE9TZ2s5cFdHS3JPZnc9PSIsInZhbHVlIjoiaDkxYlZaZVFRUUUya2I4dFpmS1I3bXljNVBMbHN3Z3p3YmJBdG0wd0xIdjIvTTUyVmJoWWZLOXdZQTBBUkl2Vld3Ym5XRXEvWllhS3NYRkk1YUZBTVZjUU1rdXpLZnBRb0ZoaXQ4b2pQbGdxc2M0NGxkZEZTZGpDNDZmUm1hdFkiLCJtYWMiOiIxMzFkMjNmY2ZlMjA0NzBkNGE2ODQ4NThiYjE0ZTYyMzE4ODA5YzQ3ZmFiMzE5MTc2NDU4NDc2ZWFkZGFkNTZhIiwidGFnIjoiIn0%3D; expires=Mon, 09 Jun 2025 00:31:30 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: login_session=eyJpdiI6IlNQRHJaa3dCelRXYmNJajRQbFQ1Rnc9PSIsInZhbHVlIjoiY2NVRjNYR0EzNlhFY21XeU1ETVJRQU1ndjZwS1lDMy9xZHdTN1h2d1ljd1RQOUQybnZyQy9vU0I4d0trbTdjTXFXNkRuVVFwNXFYU1lJRnphMXZNRjhzSTk4enBxM05MVHZPZmpCT1NPeG9TYStGSnFNeEQwUmJNSVZkeU0yQisiLCJtYWMiOiJjMDg4NzFiOTk1MGNiMThhYjJjZDIzYTZlN2NkNmZjNzMzYThkMWI4ZGQ0MWYyMTNmYTRhNWViNmM4ZmZhN2RiIiwidGFnIjoiIn0%3D; expires=Mon, 09 Jun 2025 00:31:30 GMT; Max-Age=7200; path=/; httponly; samesite=lax
 
