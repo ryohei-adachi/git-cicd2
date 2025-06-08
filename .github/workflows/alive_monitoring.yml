@@ -1,8 +1,9 @@
 name: Alive Monitoring
 on: push
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - run: curl -s -I -o nul -w "%{http_code}" "${TARGET_URL}"
-      env:
-        TARGET_URL: "https://www.login-tech.com/lp"
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -s -I -o nul -w "%{http_code}" "${TARGET_URL}"
+        env:
+          TARGET_URL: "https://www.login-tech.com/lp"
