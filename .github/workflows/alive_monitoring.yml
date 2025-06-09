@@ -1,7 +1,7 @@
 name: Alive Monitoring
 on: push
 jobs:
-  run:
+  monitor:
     runs-on: ubuntu-latest
     steps:
       - run: echo "status_code=$(curl -s -I -o nul -w '%{http_code}' '${TARGET_URL}')" >> "${GITHUB_OUTPUT}"
