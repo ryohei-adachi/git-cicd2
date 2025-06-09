@@ -4,7 +4,9 @@ jobs:
   monitor:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "status_code=$(curl -s -I -w '%{http_code}' '${TARGET_URL}')" >> "${GITHUB_OUTPUT}"
+      - run:  |
+          status_code=$(curl -s -o /dev/null -w '%{http_code}' "${TARGET_URL}")
+          echo "status_code=$status_code" >> "${GITHUB_OUTPUT}"
         id: http_connectivity
         shell: bash
         env:
