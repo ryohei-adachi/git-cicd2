@@ -12,5 +12,5 @@ jobs:
           TARGET_URL: "https://www.login-tech.com/lp"
       - env:
            RESULT: ${{ steps.http_connectivity.outputs.status_code}}
-        run: exit 1
         if: ${{ env.RESULT != '200' }}
+        run: exit 1
