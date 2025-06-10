@@ -13,4 +13,4 @@ jobs:
       - env:
            RESULT: ${{ steps.http_connectivity.outputs.status_code}}
         run: exit 1
-        if: ${{ RESULT != 200 }}
+        if: ${{ env.RESULT != '200' }}
