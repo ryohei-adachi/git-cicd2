@@ -23,8 +23,10 @@ jobs:
           payload=$(jq -n  --arg to "$USER_ID"  --arg text "【異常発生】LOGINサイトに異常が発生してます。" '{
             to: $to,
             messages: [
-              type: "text",
-              text: $text
+              {
+                type: "text",
+                text: $text
+              }
             ]
           }')
           curl -v -X POST https://api.line.me/v2/bot/message/push -H 'Content-Type: application/json' -H "Authorization: Bearer $ACCESS_TOKEN" -d "$payload"
