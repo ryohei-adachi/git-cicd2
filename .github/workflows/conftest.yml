@@ -3,6 +3,7 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissons: {}
     steps:
       - uses: actions/checkout@v4
       - run: |
