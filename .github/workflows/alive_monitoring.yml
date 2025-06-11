@@ -11,10 +11,19 @@ jobs:
         id: http_connectivity
         shell: bash
         env:
-          TARGET_URL: "https://www.login-tech.com/lp"
+          TARGET_URL: "https://login-tech.com/lp"
       - run: echo "${{ steps.http_connectivity.outputs.status_code}}"
       - env:
            RESULT: ${{ steps.http_connectivity.outputs.status_code}}
            ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+           USER_ID: ${{ secrets.USER_ID }}
         if: ${{ env.RESULT != '200' }}
-        run: exit 1
+        run: |
+          run: sudo apt-get install jq
+          payload=$(jq -n  --arg to "$USER_ID"  --arg text "【異常発生】LOGINサイトに異常が発生してます。" '{
+            to: $to,
+            messages: [
+              type: "text",
+              text: $text
+            }')
+          curl -v -X POST https://api.line.me/v2/bot/message/push -H 'Content-Type: application/json' -H "Authorization: Bearer $ACCESS_TOKEN" -d "$payload"
