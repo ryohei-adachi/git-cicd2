@@ -19,7 +19,7 @@ jobs:
            USER_ID: ${{ secrets.USER_ID }}
         if: ${{ failure() }}
         run: |
-          run: sudo apt-get install jq
+          sudo apt-get install jq
           payload=$(jq -n  --arg to "$USER_ID"  --arg text "【異常発生】LOGINサイトに異常が発生してます。" '{
             to: $to,
             messages: [
