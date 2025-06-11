@@ -4,7 +4,8 @@ jobs:
   monitor:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - name: Check URL status
+        run: |
           status_code=$(curl -s -o /dev/null -w '%{http_code}' "${TARGET_URL}")
           echo "status_code=$status_code" >> "$GITHUB_OUTPUT"
         id: http_connectivity
@@ -14,5 +15,6 @@ jobs:
       - run: echo "${{ steps.http_connectivity.outputs.status_code}}"
       - env:
            RESULT: ${{ steps.http_connectivity.outputs.status_code}}
+           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         if: ${{ env.RESULT != '200' }}
         run: exit 1
