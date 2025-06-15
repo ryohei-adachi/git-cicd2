@@ -1,7 +1,7 @@
 name: Alive Monitoring
 on: 
   schedule:
-    - cron:  '0 8 * * *'  #毎日8時に実行
+    - cron:  '0 0 * * *'  #毎日9時に実行(GitHub ActionsのタイムゾーンはUTCらしい)
 jobs:
   monitor:
     runs-on: ubuntu-latest
