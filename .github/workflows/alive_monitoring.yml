@@ -1,7 +1,7 @@
 name: Alive Monitoring
 on: 
   schedule:
-    - cron:  '0 0 * * *'  #毎日9時に実行(GitHub ActionsのタイムゾーンはUTCらしい)
+    - cron:  '0 23 * * *'  #毎日9時ごろに実行(GitHub ActionsのタイムゾーンはUTCらしい)
 jobs:
   monitor:
     runs-on: ubuntu-latest
@@ -13,7 +13,7 @@ jobs:
         id: http_connectivity
         shell: bash
         env:
-          TARGET_URL: "https://login-tech.com/lp" #監視対象のURL
+          TARGET_URL: "https://www.login-tech.com/lp" #監視対象のURL
       - run: echo "${{ steps.http_connectivity.outputs.status_code}}"
       - env:
            ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} #公式LINEのアクセストークン
