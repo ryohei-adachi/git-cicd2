@@ -11,7 +11,7 @@ jobs:
         run: ./scripts/token.sh
         env:
           APP_ID: ${{ secrets.APP_ID }}
-          PRiVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
       - uses: actions/checkout@v4
         with:
           repository: ${{ github.repository_owner }}/${{ env.TARGET_REPO }}
