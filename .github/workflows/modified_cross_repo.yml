@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: create
-        run: ./github/scripts/token.sh
+        run: ./scripts/token.sh
         env:
           APP_ID: ${{ secrets.APP_ID }}
           PRiVATE_KEY: ${{ secrets.PRIVATE_KEY }}
