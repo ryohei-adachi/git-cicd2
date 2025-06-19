@@ -7,14 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - id: create
-        run: ./github/scripts/token.sh
-        env:
-          APP_ID: ${{ secrets.APP_ID }}
-          PRiVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-      - uses: actios/checkout@v4
-        with:
-          repository: ${{ github.repository_owner }}/${{ env.TARGET_REPO }}
-          path: ${{ env.TARGET_REPO }}
-          token: ${{ steps.create.outputs.token }}
-      - run: cat "${TARGET_REPO}/README.md"
+   #   - id: create
+   #     run: ./github/scripts/token.sh
+   #     env:
+   #       APP_ID: ${{ secrets.APP_ID }}
+   #       PRiVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+   #   - uses: actios/checkout@v4
+   #     with:
+   #       repository: ${{ github.repository_owner }}/${{ env.TARGET_REPO }}
+   #       path: ${{ env.TARGET_REPO }}
+   #       token: ${{ steps.create.outputs.token }}
+   #   - run: cat "${TARGET_REPO}/README.md"
